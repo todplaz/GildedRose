@@ -61,7 +61,7 @@ describe("GildedRose shop manager", function () {
     const gildedRose = new Shop(storeItems);
     const items = gildedRose.updateQuality();
   
-    expect(items).toStrictEqual(expectedResult);
+    expect(items).toEqual(expectedResult);
   });
   
   it("pour les articles normaux, la qualité ne doit jamais être inférieure à 0", () => {
@@ -70,7 +70,7 @@ describe("GildedRose shop manager", function () {
     const gildedRose = new Shop(storeItems);
     const items = gildedRose.updateQuality();
   
-    expect(items).toStrictEqual(expectedResult);
+    expect(items).toEqual(expectedResult);
   });
   
   it("lorsqu'on dépasse la date de vente, la qualité devrait se dégrader deux fois plus vite", () => {
@@ -79,7 +79,7 @@ describe("GildedRose shop manager", function () {
     const gildedRose = new Shop(storeItems);
     const items = gildedRose.updateQuality();
   
-    expect(items).toStrictEqual(expectedResult);
+    expect(items).toEqual(expectedResult);
   });
   
   it("la qualité d'un article ne peut jamais être supérieure à 50", () => {
@@ -88,7 +88,7 @@ describe("GildedRose shop manager", function () {
     const gildedRose = new Shop(storeItems);
     const items = gildedRose.updateQuality();
   
-    expect(items).toStrictEqual(expectedResult);
+    expect(items).toEqual(expectedResult);
   });
   
   it("la qualité d'un vieux brie devrait augmenter de 1", () => {
@@ -97,7 +97,7 @@ describe("GildedRose shop manager", function () {
     const gildedRose = new Shop(storeItems);
     const items = gildedRose.updateQuality();
   
-    expect(items).toStrictEqual(expectedResult);
+    expect(items).toEqual(expectedResult);
   });
   
   describe("Backstage passes", () => {
@@ -111,7 +111,7 @@ describe("GildedRose shop manager", function () {
       const gildedRose = new Shop(storeItems);
       const items = gildedRose.updateQuality();
   
-      expect(items).toStrictEqual(expectedResult);
+      expect(items).toEqual(expectedResult);
     });
   
     it("La qualité augmente de 2 lorsqu'il reste 10 jours ou moins", () => {
@@ -124,7 +124,7 @@ describe("GildedRose shop manager", function () {
       const gildedRose = new Shop(storeItems);
       const items = gildedRose.updateQuality();
   
-      expect(items).toStrictEqual(expectedResult);
+      expect(items).toEqual(expectedResult);
     });
   
     it("La qualité augmente de 3 lorsqu'il reste 5 jours ou moins", () => {
@@ -137,7 +137,7 @@ describe("GildedRose shop manager", function () {
       const gildedRose = new Shop(storeItems);
       const items = gildedRose.updateQuality();
   
-      expect(items).toStrictEqual(expectedResult);
+      expect(items).toEqual(expectedResult);
     });
   
     it("La qualité tombe à 0 après le concert", () => {
@@ -150,7 +150,7 @@ describe("GildedRose shop manager", function () {
       const gildedRose = new Shop(storeItems);
       const items = gildedRose.updateQuality();
   
-      expect(items).toStrictEqual(expectedResult);
+      expect(items).toEqual(expectedResult);
     });
   });
 });
